@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import AddBlog from './components/addBlog.vue'
+import AddBlog from './components/AddBlog.vue'
 import ShowBlog from './components/ShowBlog.vue'
 import BlogHeader from './components/BlogHeader.vue'
 
@@ -28,11 +28,8 @@ export default {
   .body{
     padding: 0;
     margin: 0;
+    background: rgb(246, 247, 248);
   }
-  #app{
-    /*  */
-    background: rgb(248, 250, 252);
-  }
-
+  
 
 </style>

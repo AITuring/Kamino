@@ -8,7 +8,7 @@
             <div id="author">
                 <label>作者</label>
                 <select v-model="blog.author">
-                    <option v-for="author in authors">{{author}}</option>
+                    <option v-for="author in authors" :key="author">{{author}}</option>
                 </select>
             </div>
             
@@ -53,7 +53,7 @@
                 <p>博客分类：</p>
             </div>
             <ul>
-                <li v-for="category in blog.categories">
+                <li v-for="category in blog.categories" :key="category">
                     {{category}}
                 </li>
             </ul>
@@ -113,7 +113,7 @@ export default {
         max-width: 600px;
         padding: 20px;
         background: white;
-        border-radius: 20px;
+        border-radius: 10px;
         box-shadow:15px 15px 15px -15px rgb(244, 246, 248),
              -15px 0 15px 15px rgb(244, 246, 248),
              15px 0 15px -15px rgb(244, 246, 248),

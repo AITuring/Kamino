@@ -1,9 +1,15 @@
 <template>
-    <div class="show-blog">
+    <div id="show-blog">
         <h1>博客总览</h1>
-        <input type="text" v-model="search" placeholder="搜索">
-        <div v-for="blog in filteredBlogs" class="single-blog">
-            <h2 v-rainbow>{{blog.title | to-uppercase}}</h2>
+        <div id="sear">
+            <input type="text" v-model="search" placeholder="搜索">
+        </div>
+        
+        <div class="single-blog" v-for="blog in filteredBlogs" :key="blog" >
+            <router-link v-bind:to="'/blog/'+blog.id">
+                <h2 v-rainbow>{{blog.title | to-uppercase}}</h2>
+            </router-link>
+            
             <article>{{blog.body | snippet}}</article>
         </div>
     </div>
@@ -68,9 +74,7 @@ export default {
 
 .single-blog{
     padding:20px;
-    margin: 20px 0;
-    display: table-cell;            
-    vertical-align: middle; 
+    margin: 20px auto; 
     max-width: 600px;
     box-sizing: border-box;
     background-color: white;
@@ -79,6 +83,24 @@ export default {
              -15px 0 15px 15px rgb(244, 246, 248),
              15px 0 15px -15px rgb(244, 246, 248),
              -15px 0 15px -15px rgb(244, 246, 248);
+}
+
+#show-blog a{
+    text-decoration: none;
+    color:#444;
+}
+
+#sear{
+   
+    text-align: center;
+    
+}
+
+input[type="text"]{
+    padding:8px;
+    width:100%;
+    max-width: 600px;
+    box-sizing: border-box;
 }
 
 </style>
