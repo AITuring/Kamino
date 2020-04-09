@@ -1,8 +1,13 @@
-# my-blog
 
-> A Vue.js project
+## 🪐Kamino
 
-## Build Setup
+在电影《星球大战》中，卡米诺(Kamino)是克隆人的出生地。在这里数以百万计的克隆人奔向银河系🌌，展开了一场长达三年波及整个银河系的战争。
+## 💻my-blog
+此博客也是一步步开始,逐渐变得功能强大起来,所以以卡米诺为名，希望此博客能获得很多人的喜爱。✨✨✨
+
+
+
+### Build Setup
 
 ``` bash
 # install dependencies
