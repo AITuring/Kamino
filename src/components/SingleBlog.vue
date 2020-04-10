@@ -1,6 +1,6 @@
 <template>
     <div id="single-blog">
-        <h1>{{blog.title}}</h1>
+        <h2 v-rainbow>{{blog.title}}</h2>
         <article>{{blog.body}}</article>
     </div>
 </template>
@@ -20,6 +20,13 @@ export default {
             // console.log(data);
             this.blog=data.body;
         })
+    },
+    directives:{
+        'rainbow':{
+            bind(el,binging,vnode){
+                el.style.color="#"+Math.random().toString(16).slice(2,8);
+            }
+        }
     }
     
 }

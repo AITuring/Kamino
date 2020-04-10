@@ -25,7 +25,7 @@ export default {
         margin: 0;
     }
     li{
-        display: inline-block;
+        display: block;
         margin: 0 10px;
     }
     a{
@@ -33,14 +33,18 @@ export default {
         text-decoration:none;
         padding:12px;
         border-radius:5px;
+        text-align: center;
     }
 
     nav{
+        top:0;
+        width:100%;
         background:rgb(255,255,255);
         padding:30px 0;
         margin-bottom: 40px;
-        border-radius: 10px;
-        box-shadow:0 15px 15px 15px rgb(244, 246, 248);
+        border-radius: 8px;
+        box-shadow:10px 10px 10px -10px rgb(244, 246, 248),
+                 -10px 10px 10px -10px rgb(244, 246, 248);
         text-align: center;
              
     }

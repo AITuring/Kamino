@@ -101,6 +101,7 @@ input[type="text"]{
     width:100%;
     max-width: 600px;
     box-sizing: border-box;
+    
 }
 
 </style>
